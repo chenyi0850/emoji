@@ -1,0 +1,43 @@
+#top {
+  font-size: 40rpx;
+  color: #fff;
+  background: #FF4040;
+  display: flex;
+  height: 100rpx;
+  align-items: center;
+}
+#home {
+  width: 375rpx;
+  padding-left: 250rpx;
+  border-right: 5rpx solid #fff;
+}
+#sort {
+  width: 300rpx;
+  padding-left: 45rpx;
+}
+#search {
+  padding-top: 10rpx;
+}
+text {
+  color: #333333;
+  display: block;
+  /* padding-left: 20rpx; */
+  padding: 20rpx 0 20rpx 20rpx;
+}
+navigator {
+  color: #808080;
+  padding-left: 560rpx;
+}
+image {
+  width: 190rpx;
+  height: 170rpx;
+  border: 15rpx solid #CDCDCD;
+  border-radius: 20rpx;
+  margin-left: 20rpx;
+}
+#emoji{
+  border-top: 20rpx solid #F8F8F8;
+  border-bottom: 20rpx solid #F8F8F8;
+}
+#new_emoji {
+}

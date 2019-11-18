@@ -1,0 +1,72 @@
+/* pages/user/user.wxss */
+#body{
+  height: 980rpx;
+  background-color: gray;
+}
+#top {
+  font-size: 40rpx;
+  color: #fff;
+  background: #FF4040;
+  display: flex;
+  height: 100rpx;
+  align-items: center;
+}
+#home {
+  width: 375rpx;
+  padding-left: 50rpx;
+}
+#search {
+  padding-top: 10rpx;
+  width: 375rpx;
+  padding-left: 200rpx;
+}
+#name{
+  font-size: 40rpx;
+  color: #000;
+  background-color: white;
+  display: flex;
+  height: 100rpx;
+  align-items: center;
+  padding: 100rpx 50rpx;
+}
+#head{
+  width:130rpx;
+  height: 130rpx;
+  border: 1rpx solid #000;
+  border-radius: 300rpx;
+  text-align: center;
+  line-height: 120rpx;
+}
+#name1{
+  width:130rpx;
+  height: 130rpx;
+  padding-left: 30rpx;
+  text-align: center;
+  line-height: 120rpx;
+}
+#setting{
+  width: 100rpx;
+  height: 100rpx;
+  padding-left: 280rpx;
+}
+#list{
+  font-size: 40rpx;
+  color: #000;
+  background-color: white;
+  display: flex;
+  height: 700rpx;
+  padding: 40rpx 0rpx 0rpx 50rpx;
+  flex-direction: column;
+}
+#text{
+  line-height: 10rpx;
+  padding-top: 20rpx;
+  display: flex;
+  flex-direction:row;
+}
+#main{
+  width: 600rpx;
+  padding-left: 30rpx;
+  line-height: 80rpx;
+  border-bottom:  1rpx solid #000;
+}
