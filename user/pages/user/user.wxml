@@ -1,0 +1,31 @@
+<!--pages/user/user.wxml-->
+<view id="top">
+  <view id="home">我的</view>
+  <view id="search"><icon type="search" size="30" color="#fff"/></view>
+</view>
+<view id="body">
+  <view id='name'>
+    <view id='head'>头像</view>
+    <view id='name1'>名称</view>
+    <view id="setting"><image src="../../assets/setting.png" style="width:100rpx;height:100rpx;"></image></view>
+  </view>
+  <view style="height:10rpx;"></view>
+  <view id='list'>
+    <view id="text">
+      <image src="../../assets/账号管理.png" style="width:70rpx;height:70rpx;"></image>
+    <view id='main'>账号管理</view>
+    </view>
+    <view id="text">
+      <image src="../../assets/我的收藏.png" style="width:70rpx;height:70rpx;"></image>
+      <view id='main'>我的收藏</view>
+    </view>
+    <view id="text">
+      <image src="../../assets/我的发布.png" style="width:70rpx;height:70rpx;"></image>
+      <view id='main'>我的发布</view>
+    </view>
+    <view id="text">
+      <image src="../../assets/我的下载.png" style="width:70rpx;height:70rpx;"></image>
+      <view id='main'>我的下载</view>
+    </view>
+  </view>
+</view>
