@@ -2,8 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/diy/diy",
-    "pages/user/user",
-    "pages/index/imgDetail/imgDetail"
+    "user/pages/user/user",
+    "pages/index/imgDetail/imgDetail",
+    "pages/index/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -26,7 +27,7 @@
         "selectedIconPath": "assets/DIY2.png"
       },
       {
-        "pagePath": "pages/user/user",
+        "pagePath": "user/pages/user/user",
         "text": "用户",
         "iconPath": "assets/用户.png",
         "selectedIconPath": "assets/用户2.png"

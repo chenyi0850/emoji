@@ -1,4 +1,4 @@
-// pages/user/user.js
+// users/pages/user/user.js
 Page({
 
   /**
@@ -7,11 +7,7 @@ Page({
   data: {
 
   },
-  routergo(){
-    wx.navigateTo({
-      url: '/pages/download/download',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */

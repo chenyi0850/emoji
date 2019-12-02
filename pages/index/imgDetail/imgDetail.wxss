@@ -7,12 +7,14 @@
   justify-content: center;
 }
 #searchBox {
-  border: 10rpx solid #fff;
   border-top-left-radius: 10rpx;
   border-bottom-left-radius: 10rpx;
   background: #fff;
+  width: 60%;
+  height:60rpx;
 }
 #search {
+  height:60rpx;
   color: #000;
   background: #F8F8F8;
   border: 10rpx solid #fff;
@@ -31,22 +33,22 @@
 }
 #behaviour {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   border: 5rpx solid #5F9EA0;
   height: 150rpx;
 }
 #behaviour view {
-  flex: 2.5;
+  width: 20%;
   height: 100%;
-  padding-left: 50rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .behaviourImg {
   width: 80rpx;
   height: 80rpx;
-}
-.behaviourText {
-  display: block;
-  padding-left: 10rpx;
 }
 #emoji{
   margin-top: 10rpx; 

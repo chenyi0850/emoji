@@ -1,14 +1,13 @@
 /* pages/user/user.wxss */
 #body{
-  height: 980rpx;
   background-color: gray;
 }
 #top {
   font-size: 40rpx;
   color: #fff;
-  background: #FF4040;
+  background: #5F9EA0;
   display: flex;
-  height: 100rpx;
+  height: 10vh;
   align-items: center;
 }
 #home {
@@ -34,6 +33,7 @@
   height: 130rpx;
   border: 1rpx solid #000;
   border-radius: 300rpx;
+  overflow: hidden;
   text-align: center;
   line-height: 120rpx;
 }
@@ -55,14 +55,16 @@
   background-color: white;
   display: flex;
   height: 700rpx;
-  padding: 40rpx 0rpx 0rpx 50rpx;
   flex-direction: column;
+  padding-top: 30rpx;
 }
 #text{
+  width: 90%;
   line-height: 10rpx;
-  padding-top: 20rpx;
   display: flex;
   flex-direction:row;
+  align-items: flex-end;
+  margin:30rpx auto;
 }
 #main{
   width: 600rpx;

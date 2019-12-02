@@ -1,10 +1,6 @@
 <!--pages/download/download.wxml-->
 <view id="top">
     <view id='collect'>收藏</view>
-    <view id="xian"></view>
-    <view id="publish">发布</view>
-    <view id="xian"></view>
-    <view id="download">下载</view>
     <view id="input1">
       <input id='input' auto-focus placeholder="输入查询日期"/>
     </view>
@@ -17,7 +13,7 @@
   </view>
   <view id="button02">
     <button id="button020">
-      <image  src="../../assets/list.png" style="width:70rpx;height:70rpx"></image>
+      <image src="../../assets/list.png" style="width:70rpx;height:70rpx;"></image>
     </button>
   </view>
 </view>

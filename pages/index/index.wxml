@@ -2,7 +2,7 @@
   <view class="top">
     <view class="home">首页</view>
     <view class="sort" bindtap="to_sort">分类</view>
-    <view class="search"><icon type="search" size="30" color="#fff"/></view>
+    <view bindtap="to_search" class="search"><icon type="search" size="30" color="#fff"/></view>
   </view>
   <scroll-view scroll-y lower-threshold="100" bindscrolltolower="scrollToLower" style="height: 90vh;" id="emoji">
     <view>

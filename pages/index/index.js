@@ -46,7 +46,11 @@ Page({
     this.setData({ is_index: true })
     console.log(this.data.is_index)
   },
-
+  to_search:function(){
+    wx.navigateTo({
+      url: 'search/search',
+    })
+  },
   // 点击查看图片详情
   to_imgDetail: function(event){
     console.log(event)
@@ -73,7 +77,6 @@ Page({
           wx.request({
             url: 'http://111.230.153.254/api/login',
             method: "post",
-            header: { 'content-type': 'application / x - www - form - urlencoded'},
             data: {
               js_code: res.code
             }
