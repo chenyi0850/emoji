@@ -18,18 +18,18 @@ Page({
     wx.request({
       url: 'http://111.230.153.254/api/home',
       success: function (res) {
-        console.log(res.data.data)
+        // console.log(res.data.data)
         // console.log(that.images)
         that.setData({ images: that.data.images.concat(res.data.data) })
         console.log(that.data.images)
-      }
+      } 
     })
   },
   
   // 点击去分类页面
   to_sort: function(event){
     this.setData({ is_index: false })
-    console.log(this.data.is_index)
+    // console.log(this.data.is_index)
     var that = this
     wx.request({
       url: 'http://111.230.153.254/api/category',
@@ -42,9 +42,9 @@ Page({
 
   // 点击去首页
   to_index: function(event){
-    console.log(event)
+    // console.log(event)
     this.setData({ is_index: true })
-    console.log(this.data.is_index)
+    // console.log(this.data.is_index)
   },
   to_search:function(){
     wx.navigateTo({
@@ -65,6 +65,20 @@ Page({
       }
     })
   },
+  //点击查看表情包详情
+  to_emojiDetail: function(event){
+    console.log(event)
+    wx.navigateTo({
+      url: 'emojiDetail/emojiDetail',
+      success: function(res){
+        console.log(res)
+        res.eventChannel.emit('acceptDataFromOpenerPage', { emojiId: event.target.dataset.emojiid })
+      },
+      fail: function(err){
+        console.log(err)
+      }
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
@@ -79,6 +93,9 @@ Page({
             method: "post",
             data: {
               js_code: res.code
+            },
+            success:function(res){
+              wx.setStorageSync('token', res.data.token)
             }
           })
         } else {
@@ -90,7 +107,7 @@ Page({
     wx.request({
       url: 'http://111.230.153.254/api/home',
       success: function(res){
-        console.log(res.data.data)
+        // console.log(res.data.data)
         that.setData({ images: res.data.data });
       }
     })

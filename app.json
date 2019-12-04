@@ -1,10 +1,11 @@
 {
   "pages": [
+    "component/collectPopup/collectPopup",
     "pages/index/index",
     "pages/diy/diy",
     "user/pages/user/user",
     "pages/index/imgDetail/imgDetail",
-    "pages/index/search/search"
+    "pages/index/search/search"   
   ],
   "window": {
     "backgroundTextStyle": "light",

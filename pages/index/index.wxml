@@ -21,11 +21,12 @@
   <view class="top">
     <view class="home" bindtap="to_index">首页</view>
     <view class="sort">分类</view>
-    <view class="search"><icon type="search" size="30" color="#fff"/></view>
+    <view bindtap="to_search" class="search"><icon type="search" size="30" color="#fff"/></view>
   </view>
   <scroll-view scroll-y lower-threshold="100" bindscrolltolower="scrollToLower" style="height: 100vh;" id="emoji">
     <view>
-      <image  wx:for="{{ emojis }}" wx:for-item="emoji" src="{{ emoji.url }}" ></image>
+      <image  wx:for="{{ emojis }}" wx:for-item="emoji" src="{{ emoji.url }}" data-emojiId="{{emoji.cid}}" bindtap="to_emojiDetail"></image>
     </view>
   </scroll-view>
 </view>
+
