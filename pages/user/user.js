@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    name: '福大薛之谦'
   },
 
   /**
@@ -62,5 +62,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  // 跳转到我的收藏夹页面
+  gotoDownload: function () {
+    wx.navigateTo({
+      url: '../download/download',
+    })
   }
 })

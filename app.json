@@ -1,8 +1,14 @@
 {
   "pages": [
+    "component/collectPopup/collectPopup",
     "pages/index/index",
+    "pages/download/download",
+    "pages/download/photo/photo",
+    "pages/user/user",
     "pages/diy/diy",
-    "pages/user/user"
+    "user/pages/user/user",
+    "pages/index/imgDetail/imgDetail",
+    "pages/index/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -16,23 +22,24 @@
         "pagePath": "pages/index/index",
         "text": "主页",
         "iconPath": "assets/主页.png",
-        "selectedIconPath": "assets/主页.png"
+        "selectedIconPath": "assets/主页2.png"
       },
       {
         "pagePath": "pages/diy/diy",
         "text": "制作",
         "iconPath": "assets/DIY.png",
-        "selectedIconPath": "assets/DIY.png"
+        "selectedIconPath": "assets/DIY2.png"
       },
       {
-        "pagePath": "pages/user/user",
+        "pagePath": "user/pages/user/user",
         "text": "用户",
         "iconPath": "assets/用户.png",
-        "selectedIconPath": "assets/用户.png"
+        "selectedIconPath": "assets/用户2.png"
       }
     ],
     "color": "#fff",
-    "backgroundColor": "#FF4040"
+    "selectedColor": "#000",
+    "backgroundColor": "#5F9EA0"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

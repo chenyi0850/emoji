@@ -1,2 +1,46 @@
 <!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<view id="top">
+  <view id="home">个人中心</view>
+  <view id="input1">
+    <input id='input' auto-focus />
+  </view>
+  <view id="search"><icon type="search" size="30" color="#fff"/></view>
+</view>
+<view id="body">
+  <view id='name'>
+    <view><image src="../../assets/emoji.jpg"></image></view>
+    <view id='name1'>{{name}}</view>
+    <view id="setting"><image src="../../assets/setting.png" style="width:100rpx;height:100rpx;"></image></view>
+  </view>
+  <view style="height:10rpx;"></view>
+  <view id='list'>
+    <view id="text">
+      <image src="../../assets/usersetting.png" style="width:70rpx;height:70rpx;"></image>
+    <view id="main">
+      <view id='main1'>账号管理</view>
+      <view id="jiantou"></view>
+    </view>
+    </view>
+    <view id="text">
+      <image src="../../assets/Collect.png" style="width:70rpx;height:70rpx;"></image>
+      <view id="main">
+        <view id='main1'>我的收藏</view>
+        <view id="jiantou" bindtap="gotoDownload"></view>
+      </view>
+    </view>
+    <view id="text">
+      <image src="../../assets/publish.png" style="width:70rpx;height:70rpx;"></image>
+      <view id="main">
+        <view id='main1'>我的发布</view>
+        <view id="jiantou" bindtap="gotoDownload"></view>
+      </view>
+    </view>
+    <view id="text">
+      <image src="../../assets/Download.png" style="width:70rpx;height:70rpx;"></image>
+      <view id="main">
+        <view id='main1'>我的下载</view>
+        <view id="jiantou" bindtap="gotoDownload"></view>
+      </view>
+    </view>
+  </view>
+</view>

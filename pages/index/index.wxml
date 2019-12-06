@@ -1,29 +1,32 @@
-<view id="index">
-  <view id="top">
-    <view id="home">首页</view>
-    <view id="sort">分类</view>
-    <view id="search"><icon type="search" size="30" color="#fff"/></view>
+<view id="index" wx-if="{{is_index}}">
+  <view class="top">
+    <view class="home">首页</view>
+    <view class="sort" bindtap="to_sort">分类</view>
+    <view bindtap="to_search" class="search"><icon type="search" size="30" color="#fff"/></view>
   </view>
-  <view id="emoji">
-    <view id="emoji_first">
-      <text>系列表情包1</text>
-      <image src="../../assets/emoji.jpg"></image>
-      <image src="../../assets/emoji.jpg"></image>
-      <image src="../../assets/emoji.jpg"></image>
+  <scroll-view scroll-y lower-threshold="100" bindscrolltolower="scrollToLower" style="height: 90vh;" id="emoji">
+    <view>
+      <image  wx:for="{{ images }}" wx:for-item="image" src="{{ image.url }}" data-image="{{image}}" bindtap="to_imgDetail"></image>
     </view>
-    <view id="emoji_second">
-      <text>系列表情包2</text>
-      <image src="../../assets/emoji.jpg"></image>
-      <image src="../../assets/emoji.jpg"></image>
-      <image src="../../assets/emoji.jpg"></image>
-      <navigator>查看更多 ></navigator>
-    </view>
-  </view>
-  <view id="new_emoji">
-    <text>最新</text>
-    <image src="../../assets/emoji.jpg"></image>
-    <image src="../../assets/emoji.jpg"></image>
-    <image src="../../assets/emoji.jpg"></image>
-    <navigator>查看更多 ></navigator>
-  </view>
+  </scroll-view>
 </view>
+
+<!-- <scroll-view scroll-y lower-threshold="100" bindscrolltolower="scrollToLower" style="height: 100vh;">
+    <view wx:for="{{listData}}" wx:key="{{index}}" style="height: 40px;line-height: 40px;border-bottom: 1px solid #f4f4f4;">
+      Item{{item}}
+    </view>
+  </scroll-view> -->
+
+<view id="sort" wx:else>
+  <view class="top">
+    <view class="home" bindtap="to_index">首页</view>
+    <view class="sort">分类</view>
+    <view bindtap="to_search" class="search"><icon type="search" size="30" color="#fff"/></view>
+  </view>
+  <scroll-view scroll-y lower-threshold="100" bindscrolltolower="scrollToLower" style="height: 100vh;" id="emoji">
+    <view>
+      <image  wx:for="{{ emojis }}" wx:for-item="emoji" src="{{ emoji.url }}" data-emojiId="{{emoji.cid}}" bindtap="to_emojiDetail"></image>
+    </view>
+  </scroll-view>
+</view>
+
