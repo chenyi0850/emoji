@@ -1,0 +1,41 @@
+<view class="top">
+    <input id="searchBox"></input>
+    <view id="search">搜索</view>
+</view>
+<view id="image">
+  <image id="mainImg" src="{{ image.url }}"></image>
+</view>
+<view id="behaviour">
+  <view>
+    <image class="behaviourImg" src="/assets/index/report.png"></image>
+    <text class="behaviourText">举报</text>
+  </view>
+  <view bindtap="collect">
+    <image class="behaviourImg" src="/assets/index/collect.png"></image>
+    <text class="behaviourText">收藏</text>
+  </view>
+  <view>
+    <image class="behaviourImg" src="/assets/index/download.png"></image>
+    <text class="behaviourText">下载</text>
+  </view>
+  <view>
+    <image class="behaviourImg" src="/assets/index/share.png"></image>
+    <text class="behaviourText">分享</text>
+  </view>
+</view>
+<view>
+  <view id="emoji">
+    <view>
+      <image class="detailImg" wx:for="{{ images }}" wx:for-item="image" src="{{ image.url }}" data-image="{{image}}" bindtap="to_imgDetail"></image>
+    </view>
+  </view>
+</view>
+
+<collectPopup id='collectPopup' 
+      title='收藏' 
+      content='学会了吗' 
+      btn_no='没有' 
+      btn_ok='学会了'
+      bind:error="_error"  
+      bind:success="_success">
+  </collectPopup>

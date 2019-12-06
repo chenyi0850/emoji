@@ -1,0 +1,83 @@
+<!--pages/download/download.wxml-->
+<view id="top">
+    <view id='collect'>收藏</view>
+    <view id="xian"></view>
+    <view id="publish">发布</view>
+    <view id="xian"></view>
+    <view id="download">下载</view>
+    <view id="input1">
+      <input id='input' auto-focus placeholder="输入查询日期"/>
+    </view>
+    <view id="search"><icon type="search" size="30" color="#fff"/></view>
+</view>
+<view id="top1">
+  <view id="button01">
+    <button id="{{currentSelect=='data'?'active':'unactive'}}" bindtap="selectdata" data-id="data">日期</button>
+    <button id="{{currentSelect=='name'?'active':'unactive'}}" bindtap="selectname" data-id="name">名称</button>
+  </view>
+  <view id="button02">
+    <button id="button020">
+      <image  src="../../assets/list.png" style="width:70rpx;height:70rpx"></image>
+    </button>
+  </view>
+</view>
+<view id="body">
+  <view id="body1">
+    <button id="button11" bindtap='create_folder'>+</button>
+    <text style="font-size:25rpx;">新建文件夹</text>
+  </view>
+  <!-- 新建文件夹 -->
+  <scroll-view scroll-y scroll-x lower-threshold="100" style="height: 90vh;" id="forItemBorder">
+    <view wx:for="{{text}}" wx:key="key" data-id="{{item}}"  bindtap="gotophoto" bindlongpress='alter_folder1'>
+      <view id="body2">
+        <button id="button12">
+          <image src="../../assets/folder.png" style="width:140rpx;height:140rpx"></image>
+        </button>
+        <text id="text" style="font-size:25rpx;">{{item.name}}</text>
+      </view>
+    </view>
+  </scroll-view>
+  <!-- 新建文件夹的时候弹出的窗体 -->
+  <view id="{{showView?'header_view_show':'header_view_hide'}}">
+    <view id="forms1">
+      <view id="forms11">
+        <button id="forms11_button" bindtap='create_folder'>取消</button>
+      </view>
+      <view id="forms12">
+        <text style="font-size:40rpx;padding-left:15rpx;padding-top:2rpx;">新建文件夹</text>
+      </view>
+      <view id="forms13">
+        <button id="forms13_button" bindtap='create_folder1' type='primary' bindtap='addItem1'>完成</button>
+      </view>
+    </view>
+    <view id="forms2">
+      <image src="../../assets/folder.png" style="width:140rpx;height:140rpx;margin-left:160rpx;margin-top:50rpx;"></image>
+    </view>
+    <view id="forms3">
+      <input id='forms3_input' bindinput="getValue" auto-focus placeholder="{{show_value}}" value="{{input_value}}"/>
+    </view>
+  </view>
+  <!-- 准备修改或者删除文件夹的时候弹出的窗体 -->
+  <view id="{{showView2?'header_view_show2':'header_view_hide2'}}">
+    <view id="forms1">
+      <view id="forms11">
+        <button id="forms11_button" bindtap='alter_folder'>取消</button>
+      </view>
+      <view id="forms12">
+        <text style="font-size:40rpx;padding-left:15rpx;padding-top:2rpx;">新建文件夹</text>
+      </view>
+      <view id="forms13">
+        <button id="forms13_button" type='primary' bindtap='alter_folder'>完成</button>
+      </view>
+    </view>
+    <view id="forms2">
+      <image src="../../assets/folder.png" style="width:140rpx;height:140rpx;margin-left:160rpx;margin-top:50rpx;"></image>
+    </view>
+    <view id="forms3">
+      <input id='forms3_input' bindinput="alter_value" auto-focus placeholder="{{show_value}}" value="{{input_val}}"/>
+    </view>
+    <view id="forms4">
+      <button id="delete" type='primary' bindtap='removeItem'>删除文件夹</button>
+    </view>
+  </view>
+</view>
