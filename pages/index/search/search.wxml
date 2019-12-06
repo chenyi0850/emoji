@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <view id="search">
   <input type="text" placeholder="请输入搜索内容" class="input"></input>
   <view class="hot">
@@ -37,44 +36,4 @@
       <image wx:for="{{ images }}" wx:for-item="image" src="{{ image.url }}" data-image="{{image}}" bindtap="to_imgDetail"></image>
     </view>
   </scroll-view>
-=======
-<view id="search">
-  <input type="text" placeholder="请输入搜索内容" class="input"></input>
-  <view class="hot">
-    <text class="title">搜索热点</text>
-    <view class="hot-item">
-      杰尼龟
-    </view>
-    <view class="hot-item">
-      皮卡丘
-    </view>
-    <view class="hot-item">
-      搞笑
-    </view>
-    <view class="hot-item">
-      还珠格格
-    </view>
-    <view class="hot-item">
-      杰尼龟
-    </view>
-    <view class="hot-item">
-      金馆长
-    </view>
-    <view class="hot-item">
-      还珠格格
-    </view>
-    <view class="hot-item">
-      杰尼龟
-    </view>
-    <view class="hot-item">
-      金馆长
-    </view>
-  </view>
-
-  <scroll-view scroll-y lower-threshold="100" bindscrolltolower="scrollToLower" style="height: 90vh;margin-top:30rpx;" id="emoji">
-    <view>
-      <image wx:for="{{ images }}" wx:for-item="image" src="{{ image.url }}" data-image="{{image}}" bindtap="to_imgDetail"></image>
-    </view>
-  </scroll-view>
->>>>>>> 1c4a0cfdc758b3ef796f23013e771ffd36c51028
 </view>

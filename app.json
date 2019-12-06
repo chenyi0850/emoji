@@ -1,7 +1,7 @@
 {
   "pages": [
-    "component/collectPopup/collectPopup",
     "pages/index/index",
+    "component/collectPopup/collectPopup",
     "pages/download/download",
     "pages/download/photo/photo",
     "pages/user/user",
@@ -31,7 +31,7 @@
         "selectedIconPath": "assets/DIY2.png"
       },
       {
-        "pagePath": "user/pages/user/user",
+        "pagePath": "pages/user/user",
         "text": "用户",
         "iconPath": "assets/用户.png",
         "selectedIconPath": "assets/用户2.png"

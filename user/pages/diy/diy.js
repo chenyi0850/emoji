@@ -1,4 +1,3 @@
-// pages/diy/diy.js
 Page({
 
   /**

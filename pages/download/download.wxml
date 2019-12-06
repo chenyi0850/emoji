@@ -1,13 +1,10 @@
 <!--pages/download/download.wxml-->
 <view id="top">
     <view id='collect'>收藏</view>
-<<<<<<< HEAD
     <view id="xian"></view>
     <view id="publish">发布</view>
     <view id="xian"></view>
     <view id="download">下载</view>
-=======
->>>>>>> 1c4a0cfdc758b3ef796f23013e771ffd36c51028
     <view id="input1">
       <input id='input' auto-focus placeholder="输入查询日期"/>
     </view>
@@ -15,21 +12,12 @@
 </view>
 <view id="top1">
   <view id="button01">
-<<<<<<< HEAD
     <button id="{{currentSelect=='data'?'active':'unactive'}}" bindtap="selectdata" data-id="data">日期</button>
     <button id="{{currentSelect=='name'?'active':'unactive'}}" bindtap="selectname" data-id="name">名称</button>
   </view>
   <view id="button02">
     <button id="button020">
       <image  src="../../assets/list.png" style="width:70rpx;height:70rpx"></image>
-=======
-    <button id="data">日期</button>
-    <button id="name">名称</button>
-  </view>
-  <view id="button02">
-    <button id="button020">
-      <image src="../../assets/list.png" style="width:70rpx;height:70rpx;"></image>
->>>>>>> 1c4a0cfdc758b3ef796f23013e771ffd36c51028
     </button>
   </view>
 </view>
@@ -39,7 +27,6 @@
     <text style="font-size:25rpx;">新建文件夹</text>
   </view>
   <!-- 新建文件夹 -->
-<<<<<<< HEAD
   <scroll-view scroll-y scroll-x lower-threshold="100" style="height: 90vh;" id="forItemBorder">
     <view wx:for="{{text}}" wx:key="key" data-id="{{item}}"  bindtap="gotophoto" bindlongpress='alter_folder1'>
       <view id="body2">
@@ -50,22 +37,6 @@
       </view>
     </view>
   </scroll-view>
-=======
-  <view wx:for="{{info.details}}" wx:key="key" id="forItemBorder">
-    <view id="body2">
-      <button id="button12" bindtap='alter_folder'>
-        <image src="../../assets/folder.png" style="width:140rpx;height:140rpx"></image>
-      </button>
-      <text id="text" style="font-size:25rpx;">{{text}}</text>
-    </view>
-  </view>
-  <!-- <view id="body2">
-    <button id="button12" bindtap='alter_folder'>
-      <image src="../../assets/folder.png" style="width:140rpx;height:140rpx"></image>
-    </button>
-    <text id="text" style="font-size:25rpx;">{{text}}</text>
-  </view> -->
->>>>>>> 1c4a0cfdc758b3ef796f23013e771ffd36c51028
   <!-- 新建文件夹的时候弹出的窗体 -->
   <view id="{{showView?'header_view_show':'header_view_hide'}}">
     <view id="forms1">
@@ -109,31 +80,4 @@
       <button id="delete" type='primary' bindtap='removeItem'>删除文件夹</button>
     </view>
   </view>
-<<<<<<< HEAD
 </view>
-=======
-</view>
-
-
-<!-- <view id="emoji01">
-  <text>2019.10.1</text>
-  <image src="../../assets/emoji.jpg"></image>
-  <image src="../../assets/emoji.jpg"></image>
-  <image src="../../assets/emoji.jpg"></image>
-</view>
-<view id="emoji02">
-  <text>2019.9.10</text>
-  <image src="../../assets/emoji.jpg"></image>
-  <image src="../../assets/emoji.jpg"></image>
-</view>
-<view id="emoji03">
-  <text>2019.9.1</text>
-  <image src="../../assets/emoji.jpg"></image>
-  <image src="../../assets/emoji.jpg"></image>
-  <image src="../../assets/emoji.jpg"></image>
-  <image src="../../assets/emoji.jpg"></image>
-</view>
-<view>
-  <navigator>查看更早 >></navigator>
-</view> -->
->>>>>>> 1c4a0cfdc758b3ef796f23013e771ffd36c51028

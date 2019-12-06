@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <view class="top">
     <input id="searchBox"></input>
     <view id="search">搜索</view>
@@ -32,39 +31,5 @@
       <image class="detailImg" wx:for="{{ emojis }}" wx:for-item="emoji" src="{{ emoji.url }}" data-emojiId="{{emoji.cid}}" bindtap="to_emojiDetail"></image>
     </view>
   </view>
-=======
-<view class="top">
-    <input id="searchBox"></input>
-    <view id="search">搜索</view>
-</view>
-<scroll-view scroll-y lower-threshold="100" bindscrolltolower="scrollToLower" style="height: 55vh;" id="emoji">
-    <view>
-      <image class="detailImg" wx:for="{{ images }}" wx:for-item="image" src="{{ image.url}}"></image>
-    </view>
-</scroll-view>
-<view id="behaviour">
-  <view>
-    <image class="behaviourImg" src="/assets/index/report.png"></image>
-    <text class="behaviourText">举报</text>
-  </view>
-  <view>
-    <image class="behaviourImg" src="/assets/index/collect.png"></image>
-    <text class="behaviourText">收藏</text>
-  </view>
-  <view>
-    <image class="behaviourImg" src="/assets/index/download.png"></image>
-    <text class="behaviourText">下载</text>
-  </view>
-  <view>
-    <image class="behaviourImg" src="/assets/index/share.png"></image>
-    <text class="behaviourText">分享</text>
-  </view>
-</view>
-<view>
-  <view id="emoji">
-    <view>
-      <image class="detailImg" wx:for="{{ emojis }}" wx:for-item="emoji" src="{{ emoji.url }}" data-emojiId="{{emoji.cid}}" bindtap="to_emojiDetail"></image>
-    </view>
-  </view>
->>>>>>> 1c4a0cfdc758b3ef796f23013e771ffd36c51028
+
 </view>
