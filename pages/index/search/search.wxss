@@ -32,7 +32,7 @@
   width: 30%;
   height: 70rpx;
 }
-#emoji{
+.emoji{
   margin-top: 10rpx; 
 }
 image {
@@ -41,4 +41,9 @@ image {
   border: 10rpx solid #CDCDCD;
   border-radius: 10rpx;
   margin-left: 23rpx;
+}
+
+.result {
+  display: flex;
+  justify-content: center;
 }

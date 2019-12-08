@@ -1,12 +1,11 @@
 {
   "pages": [
     "pages/index/index",
-    "component/collectPopup/collectPopup",
-    "pages/download/download",
-    "pages/download/photo/photo",
-    "pages/user/user",
     "pages/diy/diy",
-    "user/pages/user/user",
+    "pages/user/user",
+    "component/collectPopup/collectPopup",
+    "pages/user/collection/collection",
+    "pages/user/collection/collectSort/collectSort",
     "pages/index/imgDetail/imgDetail",
     "pages/index/search/search"
   ],

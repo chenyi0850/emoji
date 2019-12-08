@@ -1,4 +1,4 @@
-.top {
+ .top {
   font-size: 40rpx;
   color: #fff;
   background: #5F9EA0;
@@ -37,4 +37,3 @@ image {
   border-radius: 10rpx;
   margin-left: 23rpx;
 }
-

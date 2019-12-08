@@ -64,9 +64,9 @@ Page({
 
   },
   // 跳转到我的收藏夹页面
-  gotoDownload: function () {
+  toCollection: function () {
     wx.navigateTo({
-      url: '../download/download',
+      url: 'collection/collection',
     })
   }
 })

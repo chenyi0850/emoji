@@ -1,39 +1,49 @@
-<view id="search">
-  <input type="text" placeholder="请输入搜索内容" class="input"></input>
+<view id="search" wx:if="{{is_search}}">
+  <input type="text" placeholder="请输入搜索内容" class="input" bindinput="getKey" bindconfirm="search"></input>
   <view class="hot">
     <text class="title">搜索热点</text>
     <view class="hot-item">
       杰尼龟
     </view>
     <view class="hot-item">
-      皮卡丘
+      假笑男孩
     </view>
     <view class="hot-item">
-      搞笑
+      滑稽大佬
     </view>
     <view class="hot-item">
-      还珠格格
+      仓鼠
     </view>
     <view class="hot-item">
-      杰尼龟
+      胖虎
     </view>
     <view class="hot-item">
-      金馆长
+      开心鸭
     </view>
     <view class="hot-item">
-      还珠格格
+      熊本熊
     </view>
     <view class="hot-item">
-      杰尼龟
+      小猪佩奇
     </view>
     <view class="hot-item">
-      金馆长
+      天线宝宝
     </view>
   </view>
 
-  <scroll-view scroll-y lower-threshold="100" bindscrolltolower="scrollToLower" style="height: 90vh;margin-top:30rpx;" id="emoji">
+  <scroll-view scroll-y lower-threshold="100" bindscrolltolower="scrollToLower" style="height: 90vh;margin-top:30rpx;" class="emoji">
     <view>
       <image wx:for="{{ images }}" wx:for-item="image" src="{{ image.url }}" data-image="{{image}}" bindtap="to_imgDetail"></image>
     </view>
   </scroll-view>
+</view>
+
+<view wx:else>
+  <input type="text" placeholder="请输入搜索内容" class="input" bindinput="getKey" bindconfirm="search"></input>
+  <text class="title result">搜索结果</text>
+  <view class="emoji">
+    <view>
+      <image  wx:for="{{ results }}" wx:for-item="result" src="{{ result.url }}" data-image="{{image}}" bindtap="to_imgDetail"></image>
+    </view>
+  </view>
 </view>

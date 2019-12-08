@@ -1,4 +1,4 @@
-
+// pages/index/emojiDetail/emojiDetail.js
 Page({
 
   /**
@@ -13,7 +13,7 @@ Page({
     page: 1
   },
 
-  // 点击去图片详情
+  // 点击去表情包详情
   to_emojiDetail: function (event) {
     console.log(event)
     wx.navigateTo({
@@ -21,6 +21,20 @@ Page({
       success: function (res) {
         console.log(res)
         res.eventChannel.emit('acceptDataFromOpenerPage', { emojiId: event.target.dataset.emojiid })
+      },
+      fail: function (err) {
+        console.log(err)
+      }
+    })
+  },
+  // 点击去图片详情
+  to_imgDetail: function (event) {
+    console.log(event)
+    wx.navigateTo({
+      url: '../imgDetail/imgDetail',
+      success: function (res) {
+        // console.log(res)
+        res.eventChannel.emit('acceptDataFromOpenerPage', { image: event.target.dataset.image })
       },
       fail: function (err) {
         console.log(err)
@@ -45,6 +59,9 @@ Page({
         console.log(err)
       }
     })
+  },
+  collect:function(){
+    this.collectPopup.showPopup()
   },
   /**
    * 生命周期函数--监听页面加载
@@ -77,6 +94,11 @@ Page({
     })
     wx.request({
       url: 'http://111.230.153.254/api/category',
+      method: 'get',
+      data: {
+        limit: 15,
+        page: that.data.page
+      },
       success: function (res) {
         // console.log(res.data.data)
         that.setData({ emojis: res.data.data });
@@ -88,7 +110,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    this.collectPopup = this.selectComponent("#collectPopup")
   },
 
   /**
@@ -132,5 +154,4 @@ Page({
   onShareAppMessage: function () {
 
   }
-
 })

@@ -14,14 +14,14 @@
     <image class="behaviourImg" src="/assets/index/collect.png"></image>
     <text class="behaviourText">收藏</text>
   </view>
-  <view>
+  <view bindtap="download">
     <image class="behaviourImg" src="/assets/index/download.png"></image>
     <text class="behaviourText">下载</text>
   </view>
-  <view>
+  <button bindtap="share" open-type="share">
     <image class="behaviourImg" src="/assets/index/share.png"></image>
     <text class="behaviourText">分享</text>
-  </view>
+  </button>
 </view>
 <view>
   <view id="emoji">
@@ -31,11 +31,5 @@
   </view>
 </view>
 
-<collectPopup id='collectPopup' 
-      title='收藏' 
-      content='学会了吗' 
-      btn_no='没有' 
-      btn_ok='学会了'
-      bind:error="_error"  
-      bind:success="_success">
-  </collectPopup>
+<collectPopup id='collectPopup' image="{{image}}">
+</collectPopup>

@@ -4,7 +4,7 @@
 </view>
 <scroll-view scroll-y lower-threshold="100" bindscrolltolower="scrollToLower" style="height: 55vh;" id="emoji">
     <view>
-      <image class="detailImg" wx:for="{{ images }}" wx:for-item="image" src="{{ image.url}}"></image>
+      <image class="detailImg" wx:for="{{ images }}" wx:for-item="image" src="{{ image.url}}" data-image="{{image}}" bindtap="to_imgDetail"></image>
     </view>
 </scroll-view>
 <view id="behaviour">
@@ -12,7 +12,7 @@
     <image class="behaviourImg" src="/assets/index/report.png"></image>
     <text class="behaviourText">举报</text>
   </view>
-  <view>
+  <view bindtap="collect">
     <image class="behaviourImg" src="/assets/index/collect.png"></image>
     <text class="behaviourText">收藏</text>
   </view>
@@ -31,5 +31,6 @@
       <image class="detailImg" wx:for="{{ emojis }}" wx:for-item="emoji" src="{{ emoji.url }}" data-emojiId="{{emoji.cid}}" bindtap="to_emojiDetail"></image>
     </view>
   </view>
-
 </view>
+<collectPopup id='collectPopup' emojiId="{{emojiId}}">
+</collectPopup>

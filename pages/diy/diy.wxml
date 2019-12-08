@@ -1,2 +1,10 @@
-<text>pages/diy/diy.wxml</text>
+<view id="diy">
+  <!--view class="top">
+    <view class="home">图片</view>
+    <view class="sort" bindtap="to_sort">gif</view>
+  </view-->
 
+  <view id="main">
+    <image mode="widthFix" bindtap="routergo" data-src="{{item.url}}" class="img" wx:key="0" wx:for="{{imgArray}}" src="{{item.url}}"></image>
+  </view>
+</view>

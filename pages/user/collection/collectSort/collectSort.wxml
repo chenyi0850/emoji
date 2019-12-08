@@ -4,6 +4,6 @@
 </view>
 <scroll-view scroll-y lower-threshold="100" bindscrolltolower="scrollToLower" style="height: 90vh;" id="emoji">
     <view>
-      <image  wx:for="{{ images }}" wx:for-item="image" src="{{ image.url }}" data-image="{{image}}" bindtap="to_imgDetail"></image>
+      <image  wx:for="{{ images }}" wx:for-item="image" src="{{ image.url }}" data-image="{{image}}" bindtap="to_imgDetail" bindlongpress="deleteImg"></image>
     </view>
 </scroll-view>

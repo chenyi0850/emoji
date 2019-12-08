@@ -1,0 +1,25 @@
+#diy{
+  min-height: 100vh;
+  background: #ccc;
+}
+.top{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #5F9EA0;
+  color: white;
+  height: 90rpx;
+  font-size: 45rpx;
+}
+
+#main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.img{
+  width: 220rpx;
+  height: 220rpx!important;
+  margin: 5rpx 0;
+}

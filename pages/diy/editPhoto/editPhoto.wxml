@@ -1,0 +1,35 @@
+<view id="editPhoto">
+  <view id="top">
+    <input id="ipt" bindinput="handleInput" type="text"></input>
+    <movable-area style="height: auto; width: 300px; margin:0 auto">
+      <canvas style="width: 300px; min-height: 300px;background:white;" canvas-id="firstCanvas">
+        <image src="{{imgSrc}}" class="img"></image>
+        <movable-view id="mv" bindchange="move" x="{{x}}" y="{{y}}" direction="all" wx:if="{{ifEdit}}">
+          <text style="font-size:{{75*scale}}rpx;white-space:nowrap;color:{{color}}">{{input}}</text>
+        </movable-view>
+      </canvas>
+    </movable-area>
+
+  </view>
+  <view id="color-area">
+    <view class="color" wx:for="{{colorArray}}" bindtap="changeColor" data-color="{{item}}" style="background:{{item}}"></view>
+  </view>
+  <view id="bottom">
+    <view class="btn" bindtap="add">
+      <image src="/assets/diy/add.png" mode="widthFix"></image>
+      <text>添加</text>
+    </view>
+    <view class="btn" bindtap="bigger">
+      <image src="/assets/diy/big.png" mode="widthFix"></image>
+      <text>放大</text>
+    </view>
+    <view class="btn" bindtap="smaller">
+      <image src="/assets/diy/small.png" mode="widthFix"></image>
+      <text>缩小</text>
+    </view>
+    <view class="btn" bindtap="dld">
+      <image src="/assets/diy/download.png" mode="widthFix"></image>
+      <text>生成</text>
+    </view>
+  </view>
+</view>

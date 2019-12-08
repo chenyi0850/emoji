@@ -5,34 +5,44 @@ Page({
    */
   data: {
     is_index: true, 
+    page: 1,
     images: [],
     emojis: []
   },
   // 上拉加载
   scrollToLower: function (e) {
-    // this.setData({
-    //   pageNo: this.data.pageNo + 1
-    // })
+    this.setData({
+      page: this.data.page + 1
+    })
+    var that =this
     // this.getData(true);
-    var that = this
     wx.request({
-      url: 'http://111.230.153.254/api/home',
+      url: 'http://111.230.153.254/api/category',
+      method: 'get',
+      data: {
+        limit: 15,
+        page: that.data.page
+      },
       success: function (res) {
         // console.log(res.data.data)
-        // console.log(that.images)
-        that.setData({ images: that.data.images.concat(res.data.data) })
-        console.log(that.data.images)
-      } 
+        that.setData({ emojis: that.data.emojis.concat(res.data.data) });
+      }
     })
+    
   },
   
   // 点击去分类页面
   to_sort: function(event){
-    this.setData({ is_index: false })
+    this.setData({ is_index: false }) 
     // console.log(this.data.is_index)
     var that = this
     wx.request({
       url: 'http://111.230.153.254/api/category',
+      method: 'get',
+      data:{
+        limit: 15,
+        page: that.data.page
+      },
       success: function (res) {
         // console.log(res.data.data)
         that.setData({ emojis: res.data.data });
@@ -57,7 +67,7 @@ Page({
     wx.navigateTo({
       url: 'imgDetail/imgDetail',
       success: function(res){
-        console.log(res)
+        // console.log(res)
         res.eventChannel.emit('acceptDataFromOpenerPage', { image: event.target.dataset.image })
       },
       fail:function(err){
@@ -95,8 +105,8 @@ Page({
               js_code: res.code
             },
             success:function(res){
-              wx.setStorageSync('token', res.data.token),
-                console.log(wx.getStorageSync('token'))
+              console.log('登录成功')
+              wx.setStorageSync('token', res.data.token)
             }
           })
         } else {
@@ -146,14 +156,30 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    
+    var that = this
+    wx.request({
+      url: 'http://111.230.153.254/api/home',
+      success: function (res) {
+        // console.log(res.data.data)
+        that.setData({ images: res.data.data });
+      }
+    })
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    
+    var that = this
+    wx.request({
+      url: 'http://111.230.153.254/api/home',
+      success: function (res) {
+        // console.log(res.data.data)
+        // console.log(that.images)
+        that.setData({ images: that.data.images.concat(res.data.data) })
+        console.log(that.data.images)
+      }
+    })
   },
 
   /**

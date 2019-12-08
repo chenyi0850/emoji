@@ -1,14 +1,24 @@
 <view class="collectPopup" hidden="{{flag}}">
-  <view class='collectPopup-container'>
-    <view class="collectPopup-title">收藏</view>
+  <view class='container shadowBgc'>
+    <view class="title">收藏</view>
+    <view class="setNewCollect" bindtap="setNewCollect">＋新建收藏夹</view>
+    <scroll-view scroll-y lower-threshold="100" bindscrolltolower="scrollToLower" style="height: 350rpx;" class="collectList">
     <checkbox-group bindchange="checkboxChange">
       <label class="checkbox" wx:for="{{collections}}">
-        <checkbox value="{{item.id}}" checked="{{item.checked}}"/>{{item.name}}
+        <checkbox value="{{item.collect_id}}"/>{{item.collect_name}}
       </label>
     </checkbox-group>
-    <view class="collectPopup-btn">
-      <text class="btn-no" bindtap='_error'>{{btn_no}}</text>
-      <text class="btn-ok" bindtap='_success'>{{btn_ok}}</text>
+    </scroll-view>
+    <view class="btn">
+      <text class="confirm" bindtap='confirm'>确认</text>
+      <text class="cancel" bindtap='cancel'>取消</text>
     </view>
+  </view>
+</view>
+<view class="newCollect" hidden="{{newFlag}}">
+  <input bindinput="getName" class="newInput" maxlength="10" type="string" placeholder="请输入收藏夹的名字"></input>
+  <view class="newBtn">
+      <text class="newConfirm" bindtap='newConfirm'>确认</text>
+      <text class="newCancel" bindtap='newCancel'>取消</text>
   </view>
 </view>

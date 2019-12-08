@@ -25,7 +25,7 @@
       <image src="../../assets/Collect.png" style="width:70rpx;height:70rpx;"></image>
       <view id="main">
         <view id='main1'>我的收藏</view>
-        <view id="jiantou" bindtap="gotoDownload"></view>
+        <view id="jiantou" bindtap="toCollection"></view>
       </view>
     </view>
     <view id="text">

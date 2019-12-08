@@ -17,7 +17,7 @@
   </view>
   <view id="button02">
     <button id="button020">
-      <image  src="../../assets/list.png" style="width:70rpx;height:70rpx"></image>
+      <image  src="/assets/list.png" style="width:70rpx;height:70rpx"></image>
     </button>
   </view>
 </view>
@@ -31,7 +31,7 @@
     <view wx:for="{{text}}" wx:key="key" data-id="{{item}}"  bindtap="gotophoto" bindlongpress='alter_folder1'>
       <view id="body2">
         <button id="button12">
-          <image src="../../assets/folder.png" style="width:140rpx;height:140rpx"></image>
+          <image src="/assets/folder.png" style="width:140rpx;height:140rpx"></image>
         </button>
         <text id="text" style="font-size:25rpx;">{{item.name}}</text>
       </view>
@@ -51,7 +51,7 @@
       </view>
     </view>
     <view id="forms2">
-      <image src="../../assets/folder.png" style="width:140rpx;height:140rpx;margin-left:160rpx;margin-top:50rpx;"></image>
+      <image src="/assets/folder.png" style="width:140rpx;height:140rpx;margin-left:160rpx;margin-top:50rpx;"></image>
     </view>
     <view id="forms3">
       <input id='forms3_input' bindinput="getValue" auto-focus placeholder="{{show_value}}" value="{{input_value}}"/>
@@ -71,7 +71,7 @@
       </view>
     </view>
     <view id="forms2">
-      <image src="../../assets/folder.png" style="width:140rpx;height:140rpx;margin-left:160rpx;margin-top:50rpx;"></image>
+      <image src="/assets/folder.png" style="width:140rpx;height:140rpx;margin-left:160rpx;margin-top:50rpx;"></image>
     </view>
     <view id="forms3">
       <input id='forms3_input' bindinput="alter_value" auto-focus placeholder="{{show_value}}" value="{{input_val}}"/>
