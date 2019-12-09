@@ -1,7 +1,7 @@
 #editPhoto{
   height: 100vh;
   width: 100%;
-  background: #5F9EA0;
+  background: #ccc;
   padding-top: 30rpx;
   display: flex;
   flex-direction: column;
@@ -14,11 +14,11 @@
   margin: 0 auto;
 }
 #ipt{
-  border: 1rpx white solid;
+  border: 1rpx rgb(0, 0, 0) solid;
   width: 300px;
-  margin:15rpx 0;
-  height: 60rpx;
-  font-size: 55rpx;
+  margin:25rpx 0;
+  height: 70rpx;
+  font-size: 60rpx;
 }
 #top{
   display: flex;
@@ -28,8 +28,6 @@
   justify-content: center;
 }
 #mv{
-  min-width: 50%;
-  
   height: 75rpx;
 }
 #mv input{
@@ -37,10 +35,10 @@
   font-size: 75rpx;
 }
 #bottom{
-  border-top: 1rpx rgb(224, 217, 217) solid;
+  border-top: 1rpx rgb(0, 0, 0) solid;
   display: flex;
   width: 100%;
-  background: rgb(34, 2, 71);
+  background: #5F9EA0;
   color: rgb(226, 224, 224);
 }
 .btn{
@@ -56,6 +54,7 @@
 }
 #color-area{
   display: flex;
+  margin-bottom: 30rpx;
   justify-content: space-around;
 }
 .color{

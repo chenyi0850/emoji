@@ -1,5 +1,5 @@
 <view class="top">
-    <input id="searchBox"></input>
+    <view id="searchBox" bindtap="to_search"></view>
     <view id="search">搜索</view>
 </view>
 <scroll-view scroll-y lower-threshold="100" bindscrolltolower="scrollToLower" style="height: 55vh;" id="emoji">

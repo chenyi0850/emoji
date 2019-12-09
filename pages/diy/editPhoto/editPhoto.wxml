@@ -1,15 +1,14 @@
 <view id="editPhoto">
   <view id="top">
-    <input id="ipt" bindinput="handleInput" type="text"></input>
     <movable-area style="height: auto; width: 300px; margin:0 auto">
       <canvas style="width: 300px; min-height: 300px;background:white;" canvas-id="firstCanvas">
         <image src="{{imgSrc}}" class="img"></image>
-        <movable-view id="mv" bindchange="move" x="{{x}}" y="{{y}}" direction="all" wx:if="{{ifEdit}}">
-          <text style="font-size:{{75*scale}}rpx;white-space:nowrap;color:{{color}}">{{input}}</text>
+        <movable-view id="mv" wx:for="{{inputArray}}" data-index="{{index}}" bindchange="move" x="{{item.x}}" y="{{item.y}}" direction="all">
+          <text bindtap="chooseText" data-index="{{index}}" data-word="{{item.word}}" style="font-size:{{75*scale}}rpx;white-space:nowrap;color:{{color}}">{{item.word}}</text>
         </movable-view>
       </canvas>
     </movable-area>
-
+    <input id="ipt" value="{{input}}" bindinput="handleInput" type="text"></input>
   </view>
   <view id="color-area">
     <view class="color" wx:for="{{colorArray}}" bindtap="changeColor" data-color="{{item}}" style="background:{{item}}"></view>

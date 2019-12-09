@@ -6,14 +6,17 @@ Page({
    */
   data: {
     imgSrc: '',
-    ifEdit: false,
     ifBorder: true,
     x: 0,
     y: 0,
+    index: -1,
     input: '',
-    scale:1,
-    color:'black',
-    colorArray:[
+    inputArray: [
+
+    ],
+    scale: 1,
+    color: 'black',
+    colorArray: [
       'red',
       'blue',
       'black',
@@ -28,41 +31,69 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-   this.setData({
+    this.setData({
       imgSrc: options.src
     });
   },
   add() {
+    let arr = this.data.inputArray;
+    if (this.data.input.length > 0) {
+      arr.push({
+        word: this.data.input,
+        x: 100,
+        y: 100
+      })
+      this.setData({
+        inputArray: arr
+      })
+    }
     this.setData({
-      ifEdit: true
+      input: '',
+      index:-1,
     })
   },
-  bigger(){
-    let sc=this.data.scale+0.1;
+  bigger() {
+    let sc = this.data.scale + 0.1;
     this.setData({
-      scale:sc
+      scale: sc
     })
   },
-  changeColor(e){
+  changeColor(e) {
     this.setData({
       color: e.currentTarget.dataset.color
     })
   },
-  smaller(){
+  smaller() {
     let sc = this.data.scale - 0.1;
     this.setData({
       scale: sc
     })
   },
   move(e) {
+    let index = e.currentTarget.dataset.index;
+    let arr = this.data.inputArray;
+    arr[index].x = e.detail.x;
+    arr[index].y = e.detail.y;
     this.setData({
-      x: e.detail.x,
-      y: e.detail.y
+      inputArray: arr
+    })
+  },
+  chooseText(e) {
+    this.setData({
+      input: e.currentTarget.dataset.word,
+      index: e.currentTarget.dataset.index,
     })
   },
   handleInput(e) {
+    if (this.data.index >= 0) {
+      let arr = this.data.inputArray;
+      arr[this.data.index].word = e.detail.value
+      this.setData({
+        inputArray: arr
+      })
+    }
     this.setData({
-      input: e.detail.value
+      input: e.detail.value,
     })
   },
   dld() {
@@ -85,11 +116,13 @@ Page({
     }
     dldFile().then(res => {
       ctx.drawImage(res.tempFilePath, 0, 0, 300, 300);
-      ctx.setFontSize(75 * that.data.scale/2)
+      ctx.setFontSize(75 * that.data.scale / 2)
       ctx.fillStyle = that.data.color;
-      ctx.fillText(that.data.input, that.data.x, that.data.y + 75 * that.data.scale / 2)
-      ctx.draw(true)
-      setTimeout(()=>{
+      that.data.inputArray.map(item => {
+        ctx.fillText(item.word, item.x, item.y + 75 * that.data.scale / 2)
+        ctx.draw(true)
+      })
+      setTimeout(() => {
         wx.canvasToTempFilePath({
           canvasId: 'firstCanvas',
           fileType: 'jpg',
@@ -102,7 +135,7 @@ Page({
             })
           }
         })
-      },500)
+      }, 500)
     })
   },
   /**

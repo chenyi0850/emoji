@@ -1,6 +1,6 @@
 <view id="index" wx-if="{{is_index}}">
   <view class="top">
-    <view class="home">首页</view>
+    <view class="home" style="font-size:45rpx">首页</view>
     <view class="sort" bindtap="to_sort">分类</view>
     <view bindtap="to_search" class="search"><icon type="search" size="30" color="#fff"/></view>
   </view>
@@ -10,7 +10,7 @@
     </view>
   </scroll-view> -->
   <view id="emoji">
-    <view>
+    <view class="main">
       <image  wx:for="{{ images }}" wx:for-item="image" src="{{ image.url }}" data-image="{{image}}" bindtap="to_imgDetail"></image>
     </view>
   </view>
@@ -25,12 +25,15 @@
 <view id="sort" wx:else>
   <view class="top">
     <view class="home" bindtap="to_index">首页</view>
-    <view class="sort">分类</view>
+    <view class="sort" style="font-size:45rpx">分类</view>
     <view bindtap="to_search" class="search"><icon type="search" size="30" color="#fff"/></view>
   </view>
   <scroll-view scroll-y lower-threshold="100" bindscrolltolower="scrollToLower" style="height: 100vh;" id="emoji">
-    <view>
-      <image  wx:for="{{ emojis }}" wx:for-item="emoji" src="{{ emoji.url }}" data-emojiId="{{emoji.cid}}" bindtap="to_emojiDetail"></image>
+    <view class="main">
+      <view class="sort-block" wx:for="{{ emojis }}" wx:for-item="emoji">
+        <image src="{{ emoji.url }}" data-emojiId="{{emoji.cid}}" bindtap="to_emojiDetail"></image>
+        <text>{{emoji.category}}</text>
+      </view>
     </view>
   </scroll-view>
 </view>

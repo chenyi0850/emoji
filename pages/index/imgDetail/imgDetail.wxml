@@ -1,5 +1,5 @@
 <view class="top">
-    <input id="searchBox"></input>
+    <view id="searchBox" bindtap="to_search"></view>
     <view id="search">搜索</view>
 </view>
 <view id="image">

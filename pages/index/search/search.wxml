@@ -2,32 +2,8 @@
   <input type="text" placeholder="请输入搜索内容" class="input" bindinput="getKey" bindconfirm="search"></input>
   <view class="hot">
     <text class="title">搜索热点</text>
-    <view class="hot-item">
-      杰尼龟
-    </view>
-    <view class="hot-item">
-      假笑男孩
-    </view>
-    <view class="hot-item">
-      滑稽大佬
-    </view>
-    <view class="hot-item">
-      仓鼠
-    </view>
-    <view class="hot-item">
-      胖虎
-    </view>
-    <view class="hot-item">
-      开心鸭
-    </view>
-    <view class="hot-item">
-      熊本熊
-    </view>
-    <view class="hot-item">
-      小猪佩奇
-    </view>
-    <view class="hot-item">
-      天线宝宝
+    <view class="hot-item" bindtap="searchHot" data-title="{{item}}" wx:for="{{hot}}">
+      {{item}}
     </view>
   </view>
 

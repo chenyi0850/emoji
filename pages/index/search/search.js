@@ -9,7 +9,37 @@ Page({
     images: [],
     emojis: [],
     results: [],
-    key: ''
+    key: '',
+    hot:[
+      '假笑男孩',
+      '杰尼龟',
+      '仓鼠',
+      '胖虎',
+      '开心鸭',
+      '小猪佩奇',
+      '熊本熊',
+      '天线宝宝',
+      '滑稽'
+    ]
+  },
+  searchHot(e){
+    let that=this;
+    wx.request({
+      url: 'http://111.230.153.254/api/search',
+      method: 'get',
+      data: {
+        kw: e.currentTarget.dataset.title,
+        limit: 18,
+        page: 1
+      },
+      success(res) {
+        that.setData({ results: res.data.data })
+        that.setData({ is_search: false })
+      },
+      fail(err) {
+        console.log(err)
+      }
+    })
   },
   scrollToLower: function(e) {
     // this.setData({

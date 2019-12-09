@@ -1,23 +1,27 @@
- .top {
+.top {
   font-size: 40rpx;
   color: #fff;
-  background: #5F9EA0;
+  background: #5f9ea0;
   display: flex;
   height: 10vh;
   align-items: center;
 }
+
 .home {
   width: 375rpx;
   padding-left: 250rpx;
   border-right: 5rpx solid #fff;
 }
+
 .sort {
   width: 300rpx;
   padding-left: 45rpx;
 }
+
 .search {
   padding-top: 10rpx;
 }
+
 /* text {
   color: #333333;
   display: block;
@@ -27,13 +31,36 @@ navigator {
   color: #808080;
   padding-left: 560rpx;
 } */
-#emoji{
-  margin-top: 10rpx; 
+
+#emoji {
+  margin-top: 10rpx;
 }
+
 image {
   width: 200rpx;
   height: 200rpx;
-  border: 10rpx solid #CDCDCD;
+  border: 10rpx solid #cdcdcd;
+  margin-top: 10rpx;
   border-radius: 10rpx;
-  margin-left: 23rpx;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.sort-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sort-block text {
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 700;
 }

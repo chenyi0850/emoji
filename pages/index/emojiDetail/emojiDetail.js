@@ -12,7 +12,11 @@ Page({
     ],
     page: 1
   },
-
+  to_search:function(){
+    wx.navigateTo({
+      url: '/pages/index/search/search',
+    })
+  },
   // 点击去表情包详情
   to_emojiDetail: function (event) {
     console.log(event)
