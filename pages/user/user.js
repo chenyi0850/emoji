@@ -1,18 +1,19 @@
 // pages/user/user.js
+
+var app = getApp
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    name: '福大薛之谦'
+   
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+   
   },
 
   /**

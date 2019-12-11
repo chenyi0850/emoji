@@ -99,13 +99,14 @@ Page({
         if (res.code) {
           //发起网络请求
           wx.request({
-            url: 'http://111.230.153.254/api/login',
+            url: 'https://111.230.153.254/api/login',
             method: "post",
             data: {
               js_code: res.code
             },
             success:function(res){
               console.log('登录成功')
+              console.log(res.data.token)
               wx.setStorageSync('token', res.data.token)
             }
           })

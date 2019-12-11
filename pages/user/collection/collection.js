@@ -262,6 +262,7 @@ Page({
     })
     console.log(e.currentTarget.dataset.id.ID);
     wx.setStorageSync('collect_id',e.currentTarget.dataset.id.ID)
+    wx.setStorageSync('collect_name', e.currentTarget.dataset.id.name)
   }
 
 })

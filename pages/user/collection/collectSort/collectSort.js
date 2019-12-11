@@ -31,6 +31,7 @@ Page({
   //     }
   //   })
   // },
+  //删除收藏
   deleteImg: function(e){
     console.log(e)
     var that = this
@@ -88,7 +89,8 @@ Page({
       success: function (res) {
         console.log(res.data.data)
         that.setData({
-          images: that.data.images.concat(res.data.data)
+          images: that.data.images.concat(res.data.data),
+          text: wx.getStorageSync('collect_name')
           })
         console.log(that.data.images)
       }

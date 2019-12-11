@@ -108,7 +108,9 @@ text {
   font-size: 40rpx;
   padding: 0;
   display: flex;
-  position: column;
+  flex-flow: row;
+  white-space:nowrap;
+  position: relative;
 }
 #button11{
   width: 140rpx;
@@ -245,7 +247,10 @@ text {
   background-color: red;
   color: white;
 }
-#forItemBorder{
-  flex-direction: row;
+#body2{
   display: flex;
+  flex-flow: row;
+  white-space:nowrap;
+  position: absolute;
+  width: 150rpx;
 }

@@ -8,19 +8,12 @@
 </view>
 <view id="body">
   <view id='name'>
-    <view><image src="../../assets/emoji.jpg"></image></view>
-    <view id='name1'>{{name}}</view>
+    <view class="userimage"><open-data type="userAvatarUrl" ></open-data></view>
+    <view id='name1'><open-data type="userNickName" ></open-data></view>
     <view id="setting"><image src="../../assets/setting.png" style="width:100rpx;height:100rpx;"></image></view>
   </view>
   <view style="height:10rpx;"></view>
   <view id='list'>
-    <view id="text">
-      <image src="../../assets/usersetting.png" style="width:70rpx;height:70rpx;"></image>
-    <view id="main">
-      <view id='main1'>账号管理</view>
-      <view id="jiantou"></view>
-    </view>
-    </view>
     <view id="text">
       <image src="../../assets/Collect.png" style="width:70rpx;height:70rpx;"></image>
       <view id="main">
@@ -38,8 +31,15 @@
     <view id="text">
       <image src="../../assets/Download.png" style="width:70rpx;height:70rpx;"></image>
       <view id="main">
-        <view id='main1'>我的下载</view>
+        <view id='main1'>清除缓存</view>
         <view id="jiantou" bindtap="gotoDownload"></view>
+      </view>
+    </view>
+    <view id="text">
+      <image src="../../assets/usersetting.png" style="width:70rpx;height:70rpx;"></image>
+      <view id="main">
+        <view id='main1'>关于我们</view>
+        <view id="jiantou"></view>
       </view>
     </view>
   </view>
