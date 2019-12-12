@@ -2,9 +2,11 @@
   <view class="top">
     <image src="/assets/diy/all.png" style="width:60rpx;height:60rpx;position:absolute;left:20rpx" bindtap="onLoad"></image>
     <input id="ipt" type="text" bindinput="handleInput" bindconfirm="search"></input>
-    <icon color="#fff"size="30"type="search"role="img"></icon>
+    <icon color="#fff" size="30" type="search" role="img"></icon>
   </view>
-  <view id="main">
-    <image mode="widthFix" bindtap="routergo" data-src="{{item.url}}" class="img" wx:key="0" wx:for="{{imgArray}}" src="{{item.url}}"></image>
-  </view>
+  <scroll-view scroll-y lower-threshold="100" style="height: 100vh;" bindscrolltolower="scrollToLower">
+    <view id="main">
+      <image mode="widthFix" bindtap="routergo" data-src="{{item.url}}" class="img" wx:key="0" wx:for="{{imgArray}}" src="{{item.url}}"></image>
+    </view>
+  </scroll-view>
 </view>
