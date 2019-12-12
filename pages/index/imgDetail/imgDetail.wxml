@@ -7,7 +7,7 @@
 </view>
 <view id="behaviour">
   <view>
-    <image class="behaviourImg" src="/assets/index/report.png"></image>
+    <image class="behaviourImg" src="/assets/index/report.png" bindtap="report"></image>
     <text class="behaviourText">举报</text>
   </view>
   <view bindtap="collect">

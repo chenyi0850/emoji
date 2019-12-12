@@ -9,6 +9,12 @@ Page({
     images: [],
     collectName: '我的收藏'
   },
+  report(){
+    let sid=this.data.image.sid;
+    wx.navigateTo({
+      url: `/pages/index/tipster/tipster?sid=${sid}`,
+    })
+  },
   to_search: function() {
     wx.navigateTo({
       url: '/pages/index/search/search',
@@ -72,7 +78,7 @@ Page({
       // console.log(that.data.image)
     })
     wx.request({
-      url: 'http://111.230.153.254/api/home',
+      url: 'https://www.linjiale.xyz/api/home',
       success: function(res) {
         // console.log(res.data.data)
         that.setData({

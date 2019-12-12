@@ -35,7 +35,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 5rpx solid #5F9EA0;
+  border-top: 5rpx solid #5F9EA0;
+  border-bottom: 5rpx solid #5F9EA0;
   height: 150rpx;
 }
 #behaviour view {
@@ -61,6 +62,9 @@
 .behaviourImg {
   width: 80rpx;
   height: 80rpx;
+}
+.behaviourText{
+  color: rgb(87, 87, 87);
 }
 #emoji{
   margin-top: 10rpx; 

@@ -1,0 +1,7 @@
+<view id="tipster">
+  <textarea id="text" bindinput="handleInput"></textarea>
+  <view id="btn">
+    <button id="return" bindtap="before">返回</button>
+    <button id="submit" bindtap="submit">举报</button>
+  </view>
+</view>

@@ -27,7 +27,7 @@ Page({
     var that = this
     var Token = wx.getStorageSync('token'); //获取token
     wx.request({
-      url: 'http://111.230.153.254/api/collection',
+      url: 'https://www.linjiale.xyz/api/collection',
       method: "get",
       header: {
         'token': Token,
@@ -188,7 +188,7 @@ Page({
     var that = this
     var Token = wx.getStorageSync('token'); //获取token
     wx.request({
-      url: 'http://111.230.153.254/api/collection',
+      url: 'https://www.linjiale.xyz/api/collection',
       method: "post",
       header: {
         'token': Token,
@@ -227,7 +227,7 @@ Page({
     var that = this
     var Token = wx.getStorageSync('token'); //获取token
     wx.request({
-      url: 'http://111.230.153.254/api/collection',
+      url: 'https://www.linjiale.xyz/api/collection',
       method: "delete",
       header: {
         'token': Token,

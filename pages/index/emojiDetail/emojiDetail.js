@@ -49,7 +49,7 @@ Page({
   scrollToLower:function(){
     var that = this
     wx.request({
-      url: `http://111.230.153.254/api/category/${that.data.emojiId}`,
+      url: `https://www.linjiale.xyz/api/category/${that.data.emojiId}`,
       data: {
         limit: 9,
         page: that.data.page
@@ -82,7 +82,7 @@ Page({
       // console.log(that.data.emojiId)
     })
     wx.request({
-      url: `http://111.230.153.254/api/category/${that.data.emojiId}`, 
+      url: `https://www.linjiale.xyz/api/category/${that.data.emojiId}`, 
       data:{
         limit:9,
         page:that.data.page
@@ -97,7 +97,7 @@ Page({
       }
     })
     wx.request({
-      url: 'http://111.230.153.254/api/category',
+      url: 'https://www.linjiale.xyz/api/category',
       method: 'get',
       data: {
         limit: 15,

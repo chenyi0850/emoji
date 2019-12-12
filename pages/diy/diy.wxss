@@ -2,16 +2,27 @@
   min-height: 100vh;
 }
 .top{
+  padding-left: 60rpx;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   background: #5F9EA0;
   color: white;
   height: 90rpx;
   font-size: 45rpx;
 }
-
+.top icon{
+  position:relative;
+  right: 65rpx;
+}
+#ipt{
+  border: 1rpx white solid;
+  border-radius: 10rpx;
+  height: 60rpx;
+  width: 60%;
+  font-size: 40rpx;
+}
 #main{
   display: flex;
   flex-wrap: wrap;

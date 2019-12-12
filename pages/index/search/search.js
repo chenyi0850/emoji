@@ -25,7 +25,7 @@ Page({
   searchHot(e){
     let that=this;
     wx.request({
-      url: 'http://111.230.153.254/api/search',
+      url: 'https://www.linjiale.xyz/api/search',
       method: 'get',
       data: {
         kw: e.currentTarget.dataset.title,
@@ -48,7 +48,7 @@ Page({
     // this.getData(true);
     var that = this
     wx.request({
-      url: 'http://111.230.153.254/api/home',
+      url: 'https://www.linjiale.xyz/api/home',
       success: function(res) {
         console.log(res.data.data)
         // console.log(that.images)
@@ -66,7 +66,7 @@ Page({
   search: function(e){
     var that =this
     wx.request({
-      url: 'http://111.230.153.254/api/search',
+      url: 'https://www.linjiale.xyz/api/search',
       method: 'get',
       data: {
         kw: that.data.key,
@@ -103,7 +103,7 @@ Page({
   onLoad: function(options) {
     var that = this
     wx.request({
-      url: 'http://111.230.153.254/api/home',
+      url: 'https://www.linjiale.xyz/api/home',
       success: function(res) {
         console.log(res.data.data)
         that.setData({

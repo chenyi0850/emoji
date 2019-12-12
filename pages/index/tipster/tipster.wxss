@@ -1,0 +1,29 @@
+#tipster{
+  height: 100vh;
+  padding-top: 40rpx;
+  padding-left: 2.5vw;
+}
+#text{
+  width: 95vw;
+  height: 300rpx;
+  border: 1rpx gray solid;
+}
+#btn{
+  width: 95vw;
+  display: flex;
+  justify-content: space-between;
+}
+#return{
+  width: 40vw;
+  border: 1rpx black solid;
+  border-radius: 10rpx;
+  margin:25rpx 0;
+}
+#submit{
+  width: 40vw;
+  background: rgb(44, 16, 199);
+  border: 1rpx black solid;
+  border-radius: 10rpx;
+  color: white;
+  margin:25rpx 0;
+}

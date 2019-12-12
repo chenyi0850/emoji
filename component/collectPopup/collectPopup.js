@@ -35,7 +35,7 @@ Component({
     this.data.token = wx.getStorageSync('token')
     // 获取收藏夹列表
     wx.request({
-      url: `http://111.230.153.254/api/collection`,
+      url: `https://www.linjiale.xyz/api/collection`,
       method: 'get',
       header: {
         token: that.data.token
@@ -99,7 +99,7 @@ Component({
         var that = this
         console.log(that.data.newCollectName)
         wx.request({
-          url: `http://111.230.153.254/api/collection`,
+          url: `https://www.linjiale.xyz/api/collection`,
           method: 'post',
           header: {
             token: that.data.token
@@ -116,7 +116,7 @@ Component({
         })
         // 新建收藏夹后重新发送获取收藏夹列表的请求
         wx.request({
-          url: `http://111.230.153.254/api/collection`,
+          url: `https://www.linjiale.xyz/api/collection`,
           method: 'get',
           header: {
             token: that.data.token
@@ -158,7 +158,7 @@ Component({
         // 新建收藏
         if (!this.data.emojiId){
           wx.request({
-            url: `http://111.230.153.254/api/collection/${that.data.collect_id}`,
+            url: `https://www.linjiale.xyz/api/collection/${that.data.collect_id}`,
             method: 'post',
             header: {
               token: that.data.token
@@ -179,7 +179,7 @@ Component({
         }
         else{
           wx.request({
-            url: `http://111.230.153.254/api/collection/${that.data.collect_id}`,
+            url: `https://www.linjiale.xyz/api/collection/${that.data.collect_id}`,
             method: 'post',
             header: {
               token: that.data.token

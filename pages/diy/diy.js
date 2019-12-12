@@ -1,31 +1,51 @@
 // pages/diy/diy.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    imgArray:[
-    ]
+    imgArray: [],
+    input: ''
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  routergo(e){
+  routergo(e) {
     wx.navigateTo({
       url: `/pages/diy/editPhoto/editPhoto?src=${e.currentTarget.dataset.src}`,
     })
   },
-  onLoad: function (options) {
+  handleInput(e) {
+    this.setData({
+      input: e.detail.value
+    })
+  },
+  search() {
     let that=this;
+    wx.showLoading({
+      title: '搜索中',
+    })
     wx.request({
-      url: `http://111.230.153.254/api/temps?limit=${30}&page=${0}`, 
+      url: 'https://www.linjiale.xyz/api/temps/search',
+      data: {
+        kw: that.data.input,
+        limit: 18,
+        page: 1
+      },
       success(res){
-        console.log(res.data.data)
         that.setData({
           imgArray:res.data.data
         })
+        wx.hideLoading()
+      }
+    })
+  },
+  onLoad: function(options) {
+    let that = this;
+    wx.showLoading({
+      title: '加载中',
+    })
+    wx.request({
+      url: `https://www.linjiale.xyz/api/temps?limit=${30}&page=${0}`,
+      success(res) {
+        that.setData({
+          imgArray: res.data.data
+        })
+        setTimeout(wx.hideLoading(),1500)
       }
     })
   },

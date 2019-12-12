@@ -8,6 +8,8 @@
         </movable-view>
       </canvas>
     </movable-area>
+
+    <text id="hint">可通过拖动移动文字</text>
     <input id="ipt" value="{{input}}" bindinput="handleInput" type="text"></input>
   </view>
   <view id="color-area">

@@ -17,7 +17,7 @@ Page({
     var that =this
     // this.getData(true);
     wx.request({
-      url: 'http://111.230.153.254/api/category',
+      url: 'https://www.linjiale.xyz/api/category',
       method: 'get',
       data: {
         limit: 15,
@@ -37,7 +37,7 @@ Page({
     // console.log(this.data.is_index)
     var that = this
     wx.request({
-      url: 'http://111.230.153.254/api/category',
+      url: 'https://www.linjiale.xyz/api/category',
       method: 'get',
       data:{
         limit: 15,
@@ -99,7 +99,7 @@ Page({
         if (res.code) {
           //发起网络请求
           wx.request({
-            url: 'https://111.230.153.254/api/login',
+            url: 'https://www.linjiale.xyz/api/login',
             method: "post",
             data: {
               js_code: res.code
@@ -117,7 +117,7 @@ Page({
     })
     var that = this
     wx.request({
-      url: 'http://111.230.153.254/api/home',
+      url: 'https://www.linjiale.xyz/api/home',
       success: function(res){
         // console.log(res.data.data)
         that.setData({ images: res.data.data });
@@ -159,7 +159,7 @@ Page({
   onPullDownRefresh: function () {
     var that = this
     wx.request({
-      url: 'http://111.230.153.254/api/home',
+      url: 'https://www.linjiale.xyz/api/home',
       success: function (res) {
         // console.log(res.data.data)
         that.setData({ images: res.data.data });
@@ -173,7 +173,7 @@ Page({
   onReachBottom: function () {
     var that = this
     wx.request({
-      url: 'http://111.230.153.254/api/home',
+      url: 'https://www.linjiale.xyz/api/home',
       success: function (res) {
         // console.log(res.data.data)
         // console.log(that.images)

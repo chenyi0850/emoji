@@ -35,7 +35,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 5rpx solid #5F9EA0;
+  border-top: 5rpx solid #5F9EA0;
+  border-bottom: 5rpx solid #5F9EA0;
   height: 150rpx;
 }
 #behaviour view {
@@ -45,6 +46,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.behaviourText{
+  color: rgb(87, 87, 87);
 }
 .behaviourImg {
   width: 80rpx;

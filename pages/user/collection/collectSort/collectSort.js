@@ -18,7 +18,7 @@ Page({
   //   var Token = wx.getStorageSync('token');//获取token
   //   var collect_id = wx.getStorageSync('collect_id');//获取文件id
   //   wx.request({
-  //     url: `http://111.230.153.254/api/collection/${collect_id}`,
+  //     url: `https://www.linjiale.xyz/api/collection/${collect_id}`,
   //     method: 'get',
   //     header:{
   //       'token': Token,
@@ -36,7 +36,7 @@ Page({
     console.log(e)
     var that = this
     wx.request({
-      url: `http://111.230.153.254/api/collection/${that.data.collect_id}`,
+      url: `https://www.linjiale.xyz/api/collection/${that.data.collect_id}`,
       method: 'delete',
       header: {
         'token': that.data.token
@@ -52,7 +52,7 @@ Page({
           duration: 2000
         })
         wx.request({
-          url: `http://111.230.153.254/api/collection/${that.data.collect_id}`,
+          url: `https://www.linjiale.xyz/api/collection/${that.data.collect_id}`,
           method: 'get',
           header: {
             'token': that.data.token,
@@ -80,7 +80,7 @@ Page({
     this.data.token = wx.getStorageSync('token');//获取token
     this.data.collect_id = wx.getStorageSync('collect_id');//获取文件id
     wx.request({
-      url: `http://111.230.153.254/api/collection/${that.data.collect_id}`,
+      url: `https://www.linjiale.xyz/api/collection/${that.data.collect_id}`,
       method: 'get',
       header: {
         'token': that.data.token,
