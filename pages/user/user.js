@@ -70,6 +70,11 @@ Page({
       url: 'collection/collection',
     })
   },
+  toDiy: function (){
+    wx.navigateTo({
+      url: 'myDiy/myDiy',
+    })
+  },
   clear:function(){
     // wx.clearStorage({
     //   succes: function(res){

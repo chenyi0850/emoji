@@ -27,7 +27,7 @@ Page({
     var that = this
     var Token = wx.getStorageSync('token'); //获取token
     wx.request({
-      url: 'https://www.linjiale.xyz/api/collection',
+      url: `https://www.linjiale.xyz/api/collection?data=${new Date()}`,
       method: "get",
       header: {
         'token': Token,
@@ -154,8 +154,8 @@ Page({
     var altertext='text['+index+'].name';
     console.log([altertext]);
     this.setData({
-      showView2: (!this.data.showView2),
-      [altertext]: (this.data.input_val),
+      showView2: (!that.data.showView2),
+      [altertext]: (that.data.input_val),
     })
     // that.onLoad();
   },
@@ -203,6 +203,39 @@ Page({
             title: '新建文件夹成功',
             icon: 'success',
             duration: 2000 //持续的时间
+          })
+          wx.request({
+            url: `https://www.linjiale.xyz/api/collection?data=${new Date()}`,
+            method: "get",
+            header: {
+              'token': Token,
+              'content-type': 'application/json'
+            },
+            data: {},
+            success: function (res) {
+              console.log(res.data.data)
+              let text = [];
+              let id = [];
+              res.data.data.forEach(item => {
+                var obj = {};
+                obj.name = item.collect_name;
+                obj.ID = item.collect_id;
+                text.push(obj);
+                // text.push(item.collect_name);
+                // id.push(item.collect_id);
+              })
+              that.setData({
+                text: text
+                // ID: id
+              })
+              for (var index in res.data) {
+                var info = that.data.info;
+                var title = that.data.title;
+                info.push(title);
+                info: info;
+                text: res.data.collect_name
+              }
+            }
           })
         } else {
           wx.showToast({

@@ -42,27 +42,81 @@ Page({
   // 下载
   download: function() {
     var that = this
-    wx.downloadFile({
-      url: that.data.image.url, //仅为示例，并非真实的资源
-      filePath: wx.env.USER_DATA_PATH + "/assets",
+    wx.getSetting({
       success(res) {
-        console.log("下载成功")
-        // 只要服务器有响应数据，就会把响应内容写入文件并进入 success 回调，业务需要自行判断是否下载到了想要的内容
-        if (res.statusCode === 200) {
-          wx.showToast({
-            title: '下载成功',
-            icon: 'none',
-            duration: 2000
-          })
-          // wx.playVoice({
-          //   filePath: res.tempFilePath
-          // })
+        if (!res.authSetting['scope.writePhotosAlbum']) {
+          wx.authorize({
+            scope: 'scope.writePhotosAlbum',
+            success(res) {
+              // ...
+              console.log(res)
+
+              wx.downloadFile({
+                url: that.data.image.url,
+                success: function (res) {
+                  console.log(res)
+                  if (res.statusCode === 200) {
+                    let img = res.tempFilePath;
+
+                    wx.saveImageToPhotosAlbum({
+                      filePath: img,
+                      success(res) {
+                        wx.showToast({
+                          title: '下载成功',
+                          icon: 'success',
+                          duration: 2000
+                        });
+                      },
+                      fail(res) {
+                        console.log(res)
+                        wx.showToast({
+                          title: '下载失败',
+                          icon: 'none',
+                          duration: 2000
+                        });
+                      }
+                    });
+                  }
+                }
+              });
+            },
+            fail(err) {
+              console.log(err)
+            }
+          });
+        } 
+        else{
+          wx.downloadFile({
+            url: that.data.image.url,
+            success: function (res) {
+              console.log(res)
+              if (res.statusCode === 200) {
+                let img = res.tempFilePath;
+
+                wx.saveImageToPhotosAlbum({
+                  filePath: img,
+                  success(res) {
+                    wx.showToast({
+                      title: '下载成功',
+                      icon: 'success',
+                      duration: 2000
+                    });
+                  },
+                  fail(res) {
+                    console.log(res)
+                    wx.showToast({
+                      title: '下载失败',
+                      icon: 'none',
+                      duration: 2000
+                    });
+                  }
+                });
+              }
+            }
+          });
         }
-      },
-      fail(err) {
-        console.log(err)
       }
-    })
+    });
   },
   /**
    * 生命周期函数--监听页面加载
