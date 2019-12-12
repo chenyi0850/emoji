@@ -23,7 +23,7 @@ Page({
         that.setData({
           imgArray: arr
         })
-        setTimeout(wx.hideLoading(), 1500)
+        wx.hideLoading()
       }
     })
 
@@ -64,7 +64,7 @@ Page({
         that.setData({
           imgArray: res.data.data
         })
-        setTimeout(wx.hideLoading(), 1500)
+        wx.hideLoading()
       }
     })
   },

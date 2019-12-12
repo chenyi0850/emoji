@@ -18,10 +18,10 @@
     <image class="behaviourImg" src="/assets/index/download.png"></image>
     <text class="behaviourText">下载</text>
   </view>
-  <button bindtap="share" open-type="share">
+  <!--button bindtap="share" open-type="share">
     <image class="behaviourImg" src="/assets/index/share.png"></image>
     <text class="behaviourText">分享</text>
-  </button>
+  </button-->
 </view>
 <view>
   <view id="emoji">

@@ -26,7 +26,6 @@ Page({
     wx.navigateTo({
       url: 'imgDetail',
       success: function(res) {
-        // console.log(res)
         res.eventChannel.emit('acceptDataFromOpenerPage', {
           image: event.target.dataset.image
         })

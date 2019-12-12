@@ -102,7 +102,7 @@ Page({
    */
   onLoad: function(options) {
     var that = this
-    wx.request({
+    /*wx.request({
       url: 'https://www.linjiale.xyz/api/home',
       success: function(res) {
         console.log(res.data.data)
@@ -110,7 +110,7 @@ Page({
           images: res.data.data
         });
       }
-    })
+    })*/
   },
 
   /**

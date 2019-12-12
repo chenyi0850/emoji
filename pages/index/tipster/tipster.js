@@ -28,7 +28,10 @@ Page({
         sid: sid
       },
       success(res) {
-        console.log(res.data)
+        wx.showModal({
+          title: '成功',
+          content: '举报成功!',
+        })
       }
     })
   },

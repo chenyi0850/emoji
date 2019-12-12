@@ -9,21 +9,21 @@
 </scroll-view>
 <view id="behaviour">
   <view>
-    <image class="behaviourImg" src="/assets/index/report.png"></image>
+    <image class="behaviourImg" src="/assets/index/report.png" bindtap="report"></image>
     <text class="behaviourText">举报</text>
   </view>
   <view bindtap="collect">
     <image class="behaviourImg" src="/assets/index/collect.png"></image>
     <text class="behaviourText">收藏</text>
   </view>
-  <view>
+  <!--view>
     <image class="behaviourImg" src="/assets/index/download.png"></image>
     <text class="behaviourText">下载</text>
   </view>
-  <view>
+  <!--view>
     <image class="behaviourImg" src="/assets/index/share.png"></image>
     <text class="behaviourText">分享</text>
-  </view>
+  </view-->
 </view>
 <view>
   <view id="emoji">

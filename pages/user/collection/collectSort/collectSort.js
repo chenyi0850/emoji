@@ -31,6 +31,22 @@ Page({
   //     }
   //   })
   // },
+  to_imgDetail: function (event) {
+    // console.log(event)
+    wx.navigateTo({
+      url: '/pages/index/imgDetail/imgDetail',
+      success: function (res) {
+        console.log(event.currentTarget.dataset.image)
+        res.eventChannel.emit('acceptDataFromOpenerPage', {
+          image: event.currentTarget.dataset.image
+        })
+        
+      },
+      fail: function (err) {
+        console.log(err)
+      }
+    })
+  },
   //删除收藏
   deleteImg: function(e){
     console.log(e)

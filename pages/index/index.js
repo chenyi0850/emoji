@@ -67,7 +67,7 @@ Page({
     wx.navigateTo({
       url: 'imgDetail/imgDetail',
       success: function(res){
-        // console.log(res)
+        console.log(event.target.dataset.image)
         res.eventChannel.emit('acceptDataFromOpenerPage', { image: event.target.dataset.image })
       },
       fail:function(err){

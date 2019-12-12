@@ -1,63 +1,74 @@
 /* pages/download/download.wxss */
+
 #top {
   font-size: 40rpx;
   color: #fff;
-  background: #5F9EA0;
+  background: #5f9ea0;
   display: flex;
   height: 100rpx;
   align-items: center;
 }
+
 #xian {
-  height:0px;
+  height: 0px;
   border: 1px solid white;
   width: 15px;
-  transform:rotate(100deg);
-  -o-transform:rotate(100deg);
-  -moz-transform:rotate(100deg);
-  -webkit-transform:rotate(100deg);
+  transform: rotate(100deg);
+  -o-transform: rotate(100deg);
+  -moz-transform: rotate(100deg);
+  -webkit-transform: rotate(100deg);
 }
+
 #collect {
   width: 120rpx;
   padding-left: 40rpx;
 }
+
 #publish {
   width: 80rpx;
 }
+
 #download {
   width: 80rpx;
 }
-#input1{
-  width: 300rpx;
+
+#input1 {
+  width: 50%;
   height: 60rpx;
   padding-left: 30rpx;
   padding-bottom: 50rpx;
 }
-#input{
+
+#input {
   border-radius: 30rpx;
-  width: 250rpx;
+  width: 100%;
   height: 60rpx;
   padding-left: 20rpx;
   background-color: white;
   opacity: 0.5;
 }
+
 #search {
   padding-top: 10rpx;
   width: 50rpx;
   margin-left: 10rpx;
 }
+
 text {
-  color: #333333;
+  color: #333;
   display: block;
   /* padding-left: 20rpx; */
   padding: 20rpx 0 20rpx 20rpx;
 }
-#top1{
+
+#top1 {
   width: 100%;
   height: 100rpx;
   display: flex;
   position: column;
 }
-#button01{
+
+#button01 {
   width: 300rpx;
   height: 70rpx;
   display: flex;
@@ -65,7 +76,8 @@ text {
   position: column;
   margin-left: 200rpx;
 }
-#active{
+
+#active {
   width: 140rpx;
   height: 70rpx;
   font-size: 40rpx;
@@ -75,7 +87,8 @@ text {
   padding: 0;
   background-color: blue;
 }
-#unactive{
+
+#unactive {
   width: 140rpx;
   height: 70rpx;
   font-size: 40rpx;
@@ -86,7 +99,8 @@ text {
   border-radius: 0rpx;
   border: 2rpx solid black;
 }
-#button02{
+
+#button02 {
   width: 100rpx;
   height: 0rpx;
   font-size: 40rpx;
@@ -94,14 +108,16 @@ text {
   margin-left: 120rpx;
   padding: 0;
 }
-#button020{
+
+#button020 {
   width: 140rpx;
   height: 0rpx;
   font-size: 40rpx;
   padding: 0;
   background-color: transparent;
 }
-#body{
+
+#body {
   z-index: 1;
   width: 100%;
   height: 950rpx;
@@ -109,10 +125,16 @@ text {
   padding: 0;
   display: flex;
   flex-flow: row;
-  white-space:nowrap;
+  white-space: nowrap;
   position: relative;
 }
-#button11{
+
+#body1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#button11 {
   width: 140rpx;
   height: 140rpx;
   font-size: 60rpx;
@@ -125,15 +147,18 @@ text {
   margin-left: 10rpx;
   background-color: transparent;
 }
-#button12{
+
+#button12 {
   width: 140rpx;
   height: 140rpx;
   padding: 0;
   margin-top: 10rpx;
   margin-left: 20rpx;
 }
+
 /* 新建文件夹时的窗体 */
-#header_view_show{
+
+#header_view_show {
   z-index: 2;
   width: 500rpx;
   height: 600rpx;
@@ -142,9 +167,10 @@ text {
   border-radius: 20rpx;
   margin-left: 150rpx;
   margin-top: 100rpx;
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
 }
-#header_view_hide{
+
+#header_view_hide {
   z-index: 2;
   width: 500rpx;
   height: 600rpx;
@@ -153,10 +179,12 @@ text {
   border-radius: 20rpx;
   margin-left: 150rpx;
   margin-top: 100rpx;
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
 }
+
 /* 修改或者删除文件夹时的窗体 */
-#header_view_show2{
+
+#header_view_show2 {
   z-index: 2;
   width: 500rpx;
   height: 700rpx;
@@ -165,9 +193,10 @@ text {
   border-radius: 20rpx;
   margin-left: 150rpx;
   margin-top: 100rpx;
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
 }
-#header_view_hide2{
+
+#header_view_hide2 {
   z-index: 2;
   width: 500rpx;
   height: 700rpx;
@@ -176,28 +205,33 @@ text {
   border-radius: 20rpx;
   margin-left: 150rpx;
   margin-top: 100rpx;
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
 }
-#forms1{
+
+#forms1 {
   width: 100%;
   height: 100rpx;
   display: flex;
-  position:column;
+  position: column;
 }
-#forms11{
+
+#forms11 {
   width: 150rpx;
   height: 50rpx;
 }
-#forms12{
+
+#forms12 {
   width: 300rpx;
   height: 50rpx;
 }
-#forms13{
+
+#forms13 {
   width: 150rpx;
   height: 50rpx;
   margin-right: 10rpx;
 }
-#forms11_button{
+
+#forms11_button {
   font-size: 35rpx;
   color: blue;
   width: 100rpx;
@@ -206,7 +240,8 @@ text {
   padding-top: 5rpx;
   background-color: transparent;
 }
-#forms13_button{
+
+#forms13_button {
   font-size: 35rpx;
   color: blue;
   width: 100rpx;
@@ -215,31 +250,37 @@ text {
   padding-top: 5rpx;
   background-color: transparent;
 }
-#forms2{
+
+#forms2 {
   width: 50%;
   height: 300rpx;
 }
-#forms3{
+
+#forms3 {
   width: 80%;
   height: 60rpx;
   margin-left: 50rpx;
   padding-left: 10rpx;
   background-color: white;
 }
-#forms3_input{
+
+#forms3_input {
   width: 90%;
   height: 60rpx;
   text-align: center;
 }
+
 /* 删除键 */
-#forms4{
+
+#forms4 {
   width: 90%;
   height: 40rpx;
   margin-left: 20rpx;
   margin-top: 30rpx;
   padding-left: 10rpx;
 }
-#delete{
+
+#delete {
   width: 100%;
   height: 40rpx;
   border-radius: 30rpx;
@@ -247,10 +288,10 @@ text {
   background-color: red;
   color: white;
 }
-#body2{
+
+#body2 {
   display: flex;
-  flex-flow: row;
-  white-space:nowrap;
-  position: absolute;
-  width: 150rpx;
+  flex-direction: column;
+  white-space: nowrap;
+  margin: 14rpx 20rpx;
 }

@@ -17,6 +17,11 @@ Page({
       url: '/pages/index/search/search',
     })
   },
+  report() {
+    wx.navigateTo({
+      url: `/pages/index/tipster/tipster?sid=0`,
+    })
+  },
   // 点击去表情包详情
   to_emojiDetail: function (event) {
     console.log(event)
@@ -37,7 +42,6 @@ Page({
     wx.navigateTo({
       url: '../imgDetail/imgDetail',
       success: function (res) {
-        // console.log(res)
         res.eventChannel.emit('acceptDataFromOpenerPage', { image: event.target.dataset.image })
       },
       fail: function (err) {
