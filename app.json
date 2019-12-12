@@ -1,14 +1,16 @@
 {
   "pages": [
+    "pages/user/user",
     "pages/index/index",
     "pages/diy/diy",
-    "pages/user/user",
     "component/collectPopup/collectPopup",
     "pages/user/collection/collection",
     "pages/user/collection/collectSort/collectSort",
     "pages/index/imgDetail/imgDetail",
     "pages/index/search/search",
-    "pages/index/tipster/tipster"
+    "pages/index/tipster/tipster",
+    "pages/user/aboutUs/aboutUs",
+    "pages/user/myDiy/myDiy"
   ],
   "window": {
     "backgroundTextStyle": "light",

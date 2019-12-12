@@ -1,19 +1,18 @@
-// pages/user/user.js
-
-var app = getApp
+// pages/user/myDiy/myDiy.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-   
+
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
+
   },
 
   /**
@@ -63,36 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  // 跳转到我的收藏夹页面
-  toCollection: function () {
-    wx.navigateTo({
-      url: 'collection/collection',
-    })
-  },
-  clear:function(){
-    // wx.clearStorage({
-    //   succes: function(res){
-    //     wx.showToast({
-    //       title: '清除成功',
-    //       icon: 'success',
-    //       duration: 2000
-    //     }),
-    //   },
-    //     fail: function(){
-    //       console.log("清除失败")
-    //     }
-    // })
-    wx.clearStorage()
-    wx.showToast({
-          title: '清除成功',
-          icon: 'success',
-          duration: 2000
-        })
-  },
-  aboutUs:function(){
-    wx.navigateTo({
-      url: 'aboutUs/aboutUs',
-    })
   }
 })

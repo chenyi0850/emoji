@@ -103,6 +103,9 @@ Page({
   onLoad: function(options) {
     var that = this
     /*wx.request({
+=======
+    wx.request({
+>>>>>>> Stashed changes
       url: 'https://www.linjiale.xyz/api/home',
       success: function(res) {
         console.log(res.data.data)

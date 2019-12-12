@@ -1,45 +1,52 @@
 <!--pages/user/user.wxml-->
 <view id="top">
   <view id="home">个人中心</view>
-  <view id="input1">
+  <!-- <view id="input1">
     <input id='input' auto-focus />
   </view>
-  <view id="search"><icon type="search" size="30" color="#fff"/></view>
+  <view id="search"><icon type="search" size="30" color="#fff"/></view> -->
 </view>
 <view id="body">
   <view id='name'>
     <view class="userimage"><open-data type="userAvatarUrl" ></open-data></view>
     <view id='name1'><open-data type="userNickName" ></open-data></view>
-    <view id="setting"><image src="../../assets/setting.png" style="width:100rpx;height:100rpx;"></image></view>
+    <!-- <view id="setting"><image src="../../assets/setting.png" style="width:100rpx;height:100rpx;"></image></view> -->
   </view>
   <view style="height:10rpx;"></view>
   <view id='list'>
     <view id="text">
       <image src="../../assets/Collect.png" style="width:70rpx;height:70rpx;"></image>
-      <view id="main">
+      <view id="main" bindtap="toCollection">
         <view id='main1'>我的收藏</view>
-        <view id="jiantou" bindtap="toCollection"></view>
+        <view id="jiantou"></view>
       </view>
     </view>
     <view id="text">
       <image src="../../assets/publish.png" style="width:70rpx;height:70rpx;"></image>
-      <view id="main">
-        <view id='main1'>我的发布</view>
-        <view id="jiantou" bindtap="gotoDownload"></view>
+      <view id="main" bindtap="toDiy">
+        <view id='main1'>我的制作</view>
+        <view id="jiantou"></view>
       </view>
     </view>
     <view id="text">
       <image src="../../assets/Download.png" style="width:70rpx;height:70rpx;"></image>
-      <view id="main">
+      <view id="main" bindtap="clear">
         <view id='main1'>清除缓存</view>
-        <view id="jiantou" bindtap="gotoDownload"></view>
+        <view id="jiantou"></view>
       </view>
     </view>
     <view id="text">
       <image src="../../assets/usersetting.png" style="width:70rpx;height:70rpx;"></image>
-      <view id="main">
+      <view id="main" bindtap="aboutUs">
         <view id='main1'>关于我们</view>
         <view id="jiantou"></view>
+      </view>
+    </view>
+    <view id="text">
+      <image src="../../assets/share.png" style="width:70rpx;height:70rpx;"></image>
+      <view id="main" bindtap="share">
+        <button open-type="share"  hover-class="none" id='share'>分享</button>
+        <view id="sharejiantou"></view>
       </view>
     </view>
   </view>

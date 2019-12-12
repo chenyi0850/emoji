@@ -59,8 +59,9 @@ Page({
       title: '加载中',
     })
     wx.request({
-      url: `https://www.linjiale.xyz/api/temps?limit=${30}&page=${0}`,
-      success(res) {
+      url: `https://www.linjiale.xyz/api/temps?limit=${30}&page=${0}`, 
+      success(res){
+        console.log(res.data.data)
         that.setData({
           imgArray: res.data.data
         })

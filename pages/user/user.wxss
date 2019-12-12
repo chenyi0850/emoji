@@ -8,7 +8,7 @@
   color: #fff;
   background: #5F9EA0;
   display: flex;
-  height: 100rpx;
+  height: 110rpx;
   align-items: center;
 }
 .userimage {
@@ -20,8 +20,7 @@
   margin: 10rpx;
 }
 #home {
-  width: 355rpx;
-  padding-left: 50rpx;
+  margin: 0 auto;
 }
 #input1{
   width: 300rpx;
@@ -63,11 +62,11 @@ image{
   padding-left: 10rpx;
   line-height: 120rpx;
 }
-#setting{
+/* #setting{
   width: 100rpx;
   height: 100rpx;
   padding-left: 100rpx;
-}
+} */
 #list{
   font-size: 40rpx;
   color: #000;
@@ -105,5 +104,23 @@ image{
   background-color: transparent;
   transform: rotate(45deg);
   margin-left: 50rpx;
+  margin-top: 17rpx;
+}
+#share{
+  width: 90rpx;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-weight: normal;
+  font-size: 45rpx;
+}
+#sharejiantou{
+  width: 40rpx;
+  height: 40rpx;
+  border-top: 2px solid #999;
+  border-right: 2px solid #999;
+  background-color: transparent;
+  transform: rotate(45deg);
+  margin-left: 410rpx;
   margin-top: 17rpx;
 }

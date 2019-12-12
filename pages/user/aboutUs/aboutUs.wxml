@@ -1,0 +1,6 @@
+<view id="aboutUs">
+  <view id="top">
+    <view id="title">关于我们</view>
+  </view>
+  <view body="content">软件工程第11组的表情包大全</view>
+</view>

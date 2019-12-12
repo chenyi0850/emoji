@@ -121,7 +121,7 @@ Page({
       success: function(res){
         // console.log(res.data.data)
         that.setData({ images: res.data.data });
-      }
+      } 
     })
   },
 
